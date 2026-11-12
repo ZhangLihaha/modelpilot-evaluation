@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ModelPilot Team Evaluation</title>
+<style>body{font:1rem/1.55 system-ui,sans-serif;max-width:58rem;margin:2rem auto;padding:0 1rem;color:#182230}
+table{border-collapse:collapse;width:100%}th,td{text-align:left;border-bottom:1px solid #c4cedb;padding:.45rem}
+.scroll{overflow:auto}</style>
+<h1>ModelPilot Team Evaluation</h1>
+<p>Evaluation date 2026-11-12. Dataset modelpilot-challenge-v1, coding and extraction.</p>
+<p>The same fixed synthetic prompts were captured through the ModelPilot provider SDK. Each model used
+a fresh text context, no tools and a 4096-output-token ceiling. An exact JSON grader compared the
+values against a predetermined answer key. Held-out cases were reserved for comparison.</p>
+<p>Calibration scores are scoped to the verified model versions, runtime settings and observed input ranges
+in the <a href="evidence.json">JSON subscription</a>. Six examples per task provide limited evidence.
+Results apply to this fixture suite. Transport failures are counted separately below.
+CNY amounts use conservative accounting and include uncertain reserves where applicable.</p>
+<div class="scroll"><table><thead><tr><th>API model</th><th>Split</th><th>Task</th><th>Passed</th>
+<th>Call failures</th><th>Median first token (ms)</th><th>Accounted CNY</th></tr></thead><tbody><tr><td>deepseek-flash</td><td>calibration</td><td>CODING</td><td>6/6</td><td>0</td><td>2322</td><td>0.018147</td></tr><tr><td>deepseek-flash</td><td>calibration</td><td>EXTRACTION</td><td>6/6</td><td>0</td><td>1800</td><td>0.018160</td></tr><tr><td>deepseek-flash</td><td>heldout</td><td>CODING</td><td>6/6</td><td>0</td><td>2110</td><td>0.017782</td></tr><tr><td>deepseek-flash</td><td>heldout</td><td>EXTRACTION</td><td>6/6</td><td>0</td><td>1890</td><td>0.020321</td></tr><tr><td>mimo-v2.6-flash</td><td>calibration</td><td>CODING</td><td>3/6</td><td>0</td><td>10356</td><td>0.005880</td></tr><tr><td>mimo-v2.6-flash</td><td>calibration</td><td>EXTRACTION</td><td>6/6</td><td>0</td><td>7544</td><td>0.004847</td></tr><tr><td>mimo-v2.6-flash</td><td>heldout</td><td>CODING</td><td>2/6</td><td>0</td><td>12176</td><td>0.006002</td></tr><tr><td>mimo-v2.6-flash</td><td>heldout</td><td>EXTRACTION</td><td>5/6</td><td>0</td><td>7960</td><td>0.005742</td></tr><tr><td>mimo-v2.6-pro</td><td>calibration</td><td>CODING</td><td>1/6</td><td>0</td><td>5356</td><td>0.017167</td></tr><tr><td>mimo-v2.6-pro</td><td>calibration</td><td>EXTRACTION</td><td>2/6</td><td>0</td><td>5065</td><td>0.014748</td></tr><tr><td>mimo-v2.6-pro</td><td>heldout</td><td>CODING</td><td>1/6</td><td>0</td><td>11416</td><td>0.015929</td></tr><tr><td>mimo-v2.6-pro</td><td>heldout</td><td>EXTRACTION</td><td>2/6</td><td>0</td><td>11448</td><td>0.016944</td></tr></tbody></table></div>
+<p>Scores describe these coding and extraction tasks. The sample does not establish general model quality.</p>
+</html>
